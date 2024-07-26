@@ -58,7 +58,23 @@ if query != "":
         card(urls)
 
 
-st.write("""
-## ⚡️ For the official dataset and paper refer below:⚡️
-<h3><a href="https://arxiv.org/abs/1604.02748">Paper</a></h3>
-""")
+footer = """
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+        }
+    </style>
+    <div class="footer">
+        <p>If you liked the app, please my star it🌟. For official dataset refer <a href="https://arxiv.org/abs/1604.02748">paper</a></p>
+    </div>
+"""
+
+st.markdown(footer, unsafe_allow_html=True)
