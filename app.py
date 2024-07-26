@@ -74,7 +74,7 @@ footer = """
         }
     </style>
     <div class="footer">
-        <p>If you liked the app, please my star it🌟. For official dataset refer <a href="https://arxiv.org/abs/1604.02748">paper</a></p>
+        <p>If you liked the app, please consider starring <a href="https://github.com/aRUsh-codes/GiffySearch">my repo</a>🌟. For official dataset refer <a href="https://arxiv.org/abs/1604.02748">paper</a></p>
     </div>
 """
 
