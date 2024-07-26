@@ -56,3 +56,9 @@ if query != "":
 
     with st.spinner(text="Fetching GIFs 🚀🚀🚀"):
         card(urls)
+
+
+st.write("""
+## ⚡️ For the official dataset and paper refer below:⚡️
+<h3><a href="https://arxiv.org/abs/1604.02748">Paper</a></h3>
+""")
