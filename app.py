@@ -9,13 +9,13 @@ def init_pinecone():
     region =  'us-east-1'
     index_name='gif-search'
     if index_name not in pc.list_indexes().names():
-    # if does not exist, create index
-    pc.create_index(
-        index_name,
-        dimension=384,
-        metric='cosine',
-        spec=pinecone.ServerlessSpec(cloud=cloud, region=region)
-    )
+        # if does not exist, create index
+        pc.create_index(
+            index_name,
+            dimension=384,
+            metric='cosine',
+            spec=pinecone.ServerlessSpec(cloud=cloud, region=region)
+        )
     
     return pc.Index('gif-search')
     
