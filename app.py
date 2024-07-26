@@ -2,13 +2,13 @@ import streamlit as st
 from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
 
-@st.experimental_singleton
+@st.singleton
 def init_pinecone():
     # find API key at app.pinecone.io
     Pinecone.init(api_key=st.secrets["api_key"], environment="us-west1-gcp")
     return Pinecone.Index('gif-search')
     
-@st.experimental_singleton
+@st.singleton
 def init_retriever():
     return SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
