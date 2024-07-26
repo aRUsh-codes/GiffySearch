@@ -1,5 +1,5 @@
 sentence-transformers
-pinecone-client==3.1.0
+pinecone-client
 tqdm
 pandas
 numpy
