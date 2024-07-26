@@ -65,11 +65,12 @@ footer = """
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #f1f1f1;
+            background-color: black;
             text-align: center;
+            color: white;
             padding: 10px;
             border-top: 1px solid #ddd;
-            font-size: 14px;
+            font-size: 16px;
         }
     </style>
     <div class="footer">
