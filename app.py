@@ -51,7 +51,7 @@ if query != "":
         xc = index.query(vector=xq, top_k=30, include_metadata=True)
         
         urls = []
-        for context in xc['results'][0]['matches']:
+        for context in xc['matches']:
             urls.append(context['metadata']['url'])
 
     with st.spinner(text="Fetching GIFs 🚀🚀🚀"):
