@@ -4,8 +4,20 @@ from sentence_transformers import SentenceTransformer
 
 def init_pinecone():
     # find API key at app.pinecone.io
-    Pinecone.init(api_key=st.secrets["api_key"], environment="us-west1-gcp")
-    return Pinecone.Index('gif-search')
+    pc = Pinecone(api_key=st.secrets["api_key"])
+    cloud = 'aws'
+    region =  'us-east-1'
+    index_name='gif-search'
+    if index_name not in pc.list_indexes().names():
+    # if does not exist, create index
+    pc.create_index(
+        index_name,
+        dimension=384,
+        metric='cosine',
+        spec=pinecone.ServerlessSpec(cloud=cloud, region=region)
+    )
+    
+    return pc.Index('gif-search')
     
 def init_retriever():
     return SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
